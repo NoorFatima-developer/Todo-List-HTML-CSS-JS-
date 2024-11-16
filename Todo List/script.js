@@ -7,10 +7,10 @@
 // Target DOM elements:
 const inputField = document.querySelector(".input-todo")
 const addButton = document.querySelector(".btn");
-const todoList = document.querySelector(".todos-list")
+const ul = document.querySelector(".todos-list")
 
 // log to check k Jin elements ko target kea hai wo target hoey b hain ya nahi...
-console.log(inputField, addButton, todoList);
+console.log(inputField, addButton, ul);
 
 
 // Jesy hi button pr click hoga input m jo b user value likhyga wo js m jygi like this:
@@ -27,7 +27,7 @@ addButton.addEventListener("click", function(){
     const li = document.createElement("li");
 
     li.textContent = todotext;
-    todoList.appendChild(li);
+    ul.appendChild(li);
 
     // Aghr m line 23, 24 ko append sy krti tu krskti thie lkin better yhi hota k elment node klye appendChil e use kry..
     // lkin append ko b krskty thy like this:
@@ -40,11 +40,4 @@ addButton.addEventListener("click", function(){
     inputField.value = "";
 
 })
-
-
-
-
-
-
-
 
