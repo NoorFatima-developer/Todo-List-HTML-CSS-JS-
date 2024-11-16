@@ -39,5 +39,67 @@ addButton.addEventListener("click", function(){
 
     inputField.value = "";
 
+    // *******Delete Button ******************
+
+    // i---Create delete button in this list...
+    const deletebutton = document.createElement("button")   //button yahan pr eementnode hai..
+    // Give name to button
+    deletebutton.textContent = "Delete";                    //delete yahan pr text node hai...
+    // // Append button ta k  list mai mjy show ho..
+    li.appendChild(deletebutton);
+
+    // ***Ab ye jo meny oper button ka name rkha or append child kea isko m append sy b krskti thie like below:
+    // deletebutton.append("delete");
+    // li.appendChild(deletebutton);***
+
+    // Add classList ta k m osko style krskon..
+    deletebutton.classList.add("delete-btn");
+
+    deletebutton.addEventListener("click", () =>{
+        li.remove();
+    })
+
+
+    // *******Edit Button******************
+
+     // ii---create edit button ****************
+     const editbutton = document.createElement("button")
+     // give name to button
+     editbutton.textContent = "Edit"; 
+     // append button ta k add pr click krny pr mjy show ho..
+     li.appendChild(editbutton);
+     // Add classList ta k m osko style krsko
+     editbutton.classList.add("edit-btn")
+
+     editbutton.addEventListener("click", () =>{
+        const inputField = document.createElement("input")  //element node
+        inputField.type = "text";
+        inputField.value = li.textContent
+        inputField.classList.add("input-field")
+
+        // Save button banaogi jo k updated text ko save kryga
+        const saveButton = document.createElement("button");
+        saveButton.textContent = "Saved";
+        li.classList.add("save-btn");
+
+        li.textContent = "";
+        li.appendChild(saveButton);
+        li.appendChild(inputField);
+
+        saveButton.addEventListener("click", () =>{
+                const updatedtext = inputField.value.trim();
+                if(updatedtext !== ""){
+                    li.textContent = updatedtext;
+                    li.appendChild(editbutton);
+                    li.appendChild(deletebutton);
+                }
+                else
+                {
+                    alert("Task cannot be completed")
+                }
+        })
+     });
+
 })
+
 

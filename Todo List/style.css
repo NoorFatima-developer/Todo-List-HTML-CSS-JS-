@@ -77,12 +77,13 @@ li {
     padding: 10px;
 }
 
-.edit-btn, .delete-btn {
+
+.edit-btn, .delete-btn{
     padding: 3px 5px;
     margin: 3px 5px;
     cursor: pointer;
     border: none;
-    background-color: none;
+    background: none;
     color: crimson;
     float: right;
     /* border-radius: 5px; */
@@ -99,3 +100,4 @@ li {
     background-color: crimson;
     color: white;
 }   
+
