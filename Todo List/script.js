@@ -77,28 +77,42 @@ addButton.addEventListener("click", function(){
         inputField.value = li.textContent
         inputField.classList.add("input-field")
 
-        // Save button banaogi jo k updated text ko save kryga
-        const saveButton = document.createElement("button");
-        saveButton.textContent = "Saved";
-        li.classList.add("save-btn");
 
-        li.textContent = "";
-        li.appendChild(saveButton);
-        li.appendChild(inputField);
+         // Save button banaogi jo k updated text ko save kryga
+         const saveButton = document.createElement("button");
+         saveButton.textContent = "Saved";
+         saveButton.classList.add("save-btn");
+ 
+         li.textContent = "";
+         li.appendChild(saveButton);
+         li.appendChild(inputField);
+ 
+         saveButton.addEventListener("click", () =>{
+                 const updatedtext = inputField.value.trim();
+                 if(updatedtext !== ""){
+                     li.textContent = updatedtext;
+                     li.appendChild(editbutton);
+                     li.appendChild(deletebutton);
+                 }
+                 else
+                 {
+                     alert("Task cannot be completed")
+                 }
+         })
+        //  container jis k andr input-field or save buttons ajye...
 
-        saveButton.addEventListener("click", () =>{
-                const updatedtext = inputField.value.trim();
-                if(updatedtext !== ""){
-                    li.textContent = updatedtext;
-                    li.appendChild(editbutton);
-                    li.appendChild(deletebutton);
-                }
-                else
-                {
-                    alert("Task cannot be completed")
-                }
-        })
+        const editcontainer = document.createElement("div");
+        editcontainer.classList.add("edit-container");
+
+        editcontainer.appendChild(inputField);
+        editcontainer.appendChild(saveButton);
+
+        li.appendChild(editcontainer);
+
+       
      });
+
+   
 
 })
 
