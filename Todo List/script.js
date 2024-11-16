@@ -5,9 +5,9 @@
 // const inputField = document.querySelector(".input-todo").value;
 
 // Target DOM elements:
-const inputField = document.querySelector(".input-todo")
-const addButton = document.querySelector(".btn");
-const ul = document.querySelector(".todos-list")
+const inputField = document.querySelector("#input_box")
+const addButton = document.querySelector("#input-btn");
+const ul = document.querySelector(".ul-list")
 
 // log to check k Jin elements ko target kea hai wo target hoey b hain ya nahi...
 console.log(inputField, addButton, ul);
