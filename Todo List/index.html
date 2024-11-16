@@ -3,14 +3,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 01(Todo List)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="todos">
-            <label for="todo-label">Enter your task:</label>
-            <input type="text" id="todo-label" placeholder="Enter todos" class="input-todo">
-            <button type="button" class="btn" >Add Todo</button>
-            <ul class="todos-list"></ul>
+  
+   <div class="todolist-container">
+    <div class="todolist-content">
+        <!-- Top content -->
+        <div class="top-content">
+            <h1>To Do List</h1>
+            <input type="text" class="input" placeholder="Enter Todos">
+            <button type="button" class="btn">Add</button>
+        </div>
+        <!-- Bottom content -->
     </div>
+   </div>
+
     <script src="script.js"></script>
 </body>
 </html>
