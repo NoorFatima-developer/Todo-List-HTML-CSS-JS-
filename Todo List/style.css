@@ -49,4 +49,48 @@ h1 {
     padding: 10px;
     cursor: pointer;
     border: none;
+    border-radius: 5px;
+    background-color: #2e60ea;
+    transition: 0.4s;
+    /* transform: 0.1s linear; */
+}
+
+#input-btn:hover{
+    background-color: #9eb7fd; 
+}
+
+.task-list{
+    margin-top: 20px;
+}
+
+.ul-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+li {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 3px 5px;
+    margin: 3px 5px;
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    color: crimson;
+    float: right;
+    /* border-radius: 5px; */
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    border: 1px solid gray;
 }
