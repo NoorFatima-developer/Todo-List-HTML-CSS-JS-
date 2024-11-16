@@ -7,16 +7,33 @@
 </head>
 <body>
   
-   <div class="todolist-container">
-    <div class="todolist-content">
-        <!-- Top content -->
-        <div class="top-content">
+    <!-- create a container for todo-list -->
+   <div id="todo-container">
+
+        <!-- 01--todo list header -->
+         <div class="header">
             <h1>To Do List</h1>
-            <input type="text" class="input" placeholder="Enter Todos">
-            <button type="button" class="btn">Add</button>
-        </div>
-        <!-- Bottom content -->
-    </div>
+         </div>
+
+        <!-- 02--input-form -->
+         <div class="input-form">
+             <!-- create input box -->
+          <input type="text" class="input-item" placeholder="Add Task" name="input-box" id="input_box">
+          <!-- create add button -->
+           <button type="button" id="input-btn" onclick="AddTask()">Add</button>
+         </div>
+
+         <!-- task list -->
+          <h2 class="task-list">Task List</h2>
+          <ul class="list-container"></ul>
+
+          <!-- task list counter -->
+
+          <div class="counter-container">
+            <div id="task-counters">
+                Completed: <span class="completed-counter">0</span> | Uncompleted: <span class="uncompleted-counter">0</span>
+            </div>
+          </div>
    </div>
 
     <script src="script.js"></script>
