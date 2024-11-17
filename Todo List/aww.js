@@ -5,7 +5,7 @@
 
 // Edit by adding new input field...
 
-// Target DOM elesments:
+// Target DOM elements:
 const inputFieldE = document.querySelector("#input_box")
 const addButton = document.querySelector("#input-btn");
 const ul = document.querySelector(".ul-list")
@@ -68,44 +68,22 @@ addButton.addEventListener("click", function(){
      li.appendChild(editbutton);
      // Add classList ta k m osko style krsko
      editbutton.classList.add("edit-btn")
-     editbutton.addEventListener("click", () =>{
-        const inputField = document.createElement("input")  //element node
-        inputField.type = "text";
-        inputField.value = li.firstChild.textContent.trim()
-        inputField.classList.add("input-field")
 
+    // Edit Functionality
+    editbutton.addEventListener("click", () => {
+        // Make text editable
+        li.contentEditable = "true";
+        li.focus(); // Automatically focus on the text for editing
 
-         // Save button banaogi jo k updated text ko save kryga
-         const saveButton = document.createElement("button");
-         saveButton.textContent = "Saved";
-         saveButton.classList.add("save-btn");
- 
-         li.textContent = "";
-         li.appendChild(saveButton);
-         li.appendChild(inputField);
- 
-         saveButton.addEventListener("click", () =>{
-                 const updatedtext = inputField.value;
-                 if(updatedtext !== ""){
-                     li.textContent = updatedtext;
-                     li.appendChild(editbutton);
-                     li.appendChild(deletebutton);
-                 }
-                 else
-                 {
-                     alert("Task cannot be completed")
-                 }
-         })
-        //  container jis k andr input-field or save buttons ajye...
+        // Change Edit button to Save button
+        editbutton.textContent = "Save";
 
-        const editcontainer = document.createElement("div");
-        editcontainer.classList.add("edit-container");
-
-        editcontainer.appendChild(inputField);
-        editcontainer.appendChild(saveButton);
-        li.appendChild(editcontainer);
-       
-     });
+        // Save functionality
+        editbutton.addEventListener("click", () => {
+            li.contentEditable = "false"; // Disable editing
+            editbutton.textContent = "Edit"; // Change back to Edit
+        }, { once: true }); // Ensures this event listener runs only once
+    });
 })
 
 

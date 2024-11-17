@@ -1,3 +1,5 @@
+## 
+
 // Javascript sy hum jis input "value" ko laingy osko mai yahan pr b leskti o .value krk or nichy 1 aleda sy variable bana k b krskti o..its totally
 // depends on me...
 // I can do like this:
