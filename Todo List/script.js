@@ -1,6 +1,5 @@
 // Javascript sy hum jis input "value" ko laingy osko mai yahan pr b leskti o .value krk or nichy 1 aleda sy variable bana k b krskti o..its totally
 // depends on me...
-
 // I can do like this:
 // const inputFieldE = document.querySelector(".input-todo").value;
 
@@ -11,7 +10,6 @@ const ul = document.querySelector(".ul-list")
 
 // log to check k Jin elements ko target kea hai wo target hoey b hain ya nahi...
 console.log(inputFieldE, addButton, ul);
-
 
 // Jesy hi button pr click hoga input m jo b user value likhyga wo js m jygi like this:
 
