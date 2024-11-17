@@ -2,22 +2,22 @@
 // depends on me...
 
 // I can do like this:
-// const inputField = document.querySelector(".input-todo").value;
+// const inputFieldE = document.querySelector(".input-todo").value;
 
 // Target DOM elements:
-const inputField = document.querySelector("#input_box")
+const inputFieldE = document.querySelector("#input_box")
 const addButton = document.querySelector("#input-btn");
 const ul = document.querySelector(".ul-list")
 
 // log to check k Jin elements ko target kea hai wo target hoey b hain ya nahi...
-console.log(inputField, addButton, ul);
+console.log(inputFieldE, addButton, ul);
 
 
 // Jesy hi button pr click hoga input m jo b user value likhyga wo js m jygi like this:
 
 addButton.addEventListener("click", function(){
     // Get value of the input field:
-    const todotext = inputField.value.trim();       //trim removes extra spaces...
+    const todotext = inputFieldE.value.trim();       //trim removes extra spaces...
     if(todotext === ""){
         alert("Please enter a todo");
         return;
@@ -37,7 +37,7 @@ addButton.addEventListener("click", function(){
 
     // Ab 1 dfa value add hogi phr osko clear krygy ta k new value add krsky user:
 
-    inputField.value = "";
+    inputFieldE.value = "";
 
     // *******Delete Button ******************
 
@@ -72,10 +72,10 @@ addButton.addEventListener("click", function(){
      editbutton.classList.add("edit-btn")
 
      editbutton.addEventListener("click", () =>{
-        const inputField = document.createElement("input")  //element node
-        inputField.type = "text";
-        inputField.value = li.textContent
-        inputField.classList.add("input-field")
+        const inputFieldE = document.createElement("input")  //element node
+        inputFieldE.type = "text";
+        inputFieldE.value = li.firstChild.textContent.trim()
+        inputFieldE.classList.add("input-field")
 
 
          // Save button banaogi jo k updated text ko save kryga
@@ -85,10 +85,10 @@ addButton.addEventListener("click", function(){
  
          li.textContent = "";
          li.appendChild(saveButton);
-         li.appendChild(inputField);
+         li.appendChild(inputFieldE);
  
          saveButton.addEventListener("click", () =>{
-                 const updatedtext = inputField.value.trim();
+                 const updatedtext = inputFieldE.value;
                  if(updatedtext !== ""){
                      li.textContent = updatedtext;
                      li.appendChild(editbutton);
@@ -104,9 +104,8 @@ addButton.addEventListener("click", function(){
         const editcontainer = document.createElement("div");
         editcontainer.classList.add("edit-container");
 
-        editcontainer.appendChild(inputField);
+        editcontainer.appendChild(inputFieldE);
         editcontainer.appendChild(saveButton);
-
         li.appendChild(editcontainer);
 
        
