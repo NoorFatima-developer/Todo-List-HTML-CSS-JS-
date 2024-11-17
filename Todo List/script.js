@@ -20,7 +20,6 @@ addButton.addEventListener("click", function(){
         alert("Please enter a todo");
         return;
     }
-
     // List of todos.jo ul m append o gi:
     const li = document.createElement("li");
 
@@ -70,10 +69,10 @@ addButton.addEventListener("click", function(){
      editbutton.classList.add("edit-btn")
 
      editbutton.addEventListener("click", () =>{
-        const inputFieldE = document.createElement("input")  //element node
-        inputFieldE.type = "text";
-        inputFieldE.value = li.firstChild.textContent.trim()
-        inputFieldE.classList.add("input-field")
+        const inputField = document.createElement("input")  //element node
+        inputField.type = "text";
+        inputField.value = li.firstChild.textContent.trim()
+        inputField.classList.add("input-field")
 
 
          // Save button banaogi jo k updated text ko save kryga
@@ -83,10 +82,10 @@ addButton.addEventListener("click", function(){
  
          li.textContent = "";
          li.appendChild(saveButton);
-         li.appendChild(inputFieldE);
+         li.appendChild(inputField);
  
          saveButton.addEventListener("click", () =>{
-                 const updatedtext = inputFieldE.value;
+                 const updatedtext = inputField.value;
                  if(updatedtext !== ""){
                      li.textContent = updatedtext;
                      li.appendChild(editbutton);
@@ -102,7 +101,7 @@ addButton.addEventListener("click", function(){
         const editcontainer = document.createElement("div");
         editcontainer.classList.add("edit-container");
 
-        editcontainer.appendChild(inputFieldE);
+        editcontainer.appendChild(inputField);
         editcontainer.appendChild(saveButton);
         li.appendChild(editcontainer);
 
