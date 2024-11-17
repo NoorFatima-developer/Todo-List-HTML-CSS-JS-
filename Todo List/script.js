@@ -15,7 +15,6 @@ addButton.onclick = () => {
         inputField.value = "";
 }   
 
-
 function saveInfo(arr){
     let str = JSON.stringify(arr);
     localStorage.setItem("users", str)
