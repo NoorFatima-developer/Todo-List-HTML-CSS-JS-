@@ -1,4 +1,4 @@
 "# Todo-List-HTML-CSS-JS-" 
-## Project Demo
 
-[Click here to watch the demo video](./video/Todo-List.mp4)
+Project Demo
+Click here to View the Todo List: https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/
