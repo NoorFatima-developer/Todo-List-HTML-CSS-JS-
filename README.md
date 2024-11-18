@@ -6,4 +6,6 @@ Click here to View the Todo List: https://noorfatima-developer.github.io/Todo-Li
 
 
 
-[Click here to watch the demo video](https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/Todo-List.mp4)
+[Click here to watch the demo video](https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/assets/Todo-List.mp4)
+
+
