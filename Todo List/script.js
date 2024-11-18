@@ -10,30 +10,32 @@ if(objStr!=null){
     userArray  = JSON.parse(objStr)
 }
 
-DisplayInfo()
-
 addButton.onclick = () => {
     const name = inputField.value.trim();
 
     if(edit_id!=null){
         //edit
         userArray.splice(edit_id, 1,{"names": name});
+        edit_id = null;
     }else{
         //insert
         if(name == ""){
         alert("Please Enter a Name");
         return;
-    }
-    userArray.push({"names": name})
+    }else
+         userArray.push({"names": name})
     }
 
-    DisplayInfo()
+    saveInfo(userArray); // Save data and update UI
+    inputField.value = ""; // Clear input field
     addButton.innerText = "Add"
 }   
 
 function saveInfo(arr){
     let str = JSON.stringify(arr);
-    localStorage.setItem("users", str)
+    localStorage.setItem("users", str);
+    DisplayInfo()
+
 }
 
 function DisplayInfo(){
@@ -57,5 +59,4 @@ function EditInfo(id){
 function DeleteInfo(id){
     userArray.splice(id, 1)
     saveInfo(userArray);
-    DisplayInfo()
 }
