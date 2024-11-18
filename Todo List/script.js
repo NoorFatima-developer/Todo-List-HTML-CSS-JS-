@@ -1,6 +1,9 @@
 const inputField = document.querySelector("#input_box")
 const addButton = document.querySelector("#input-btn");
 const ul = document.querySelector(".ul-list")
+const completedCounter = document.querySelector(".completed-counter");
+const uncompletedCounter = document.querySelector(".uncompleted-counter");
+
 let userArray = [];
 let edit_id = null;
 
@@ -42,12 +45,20 @@ function DisplayInfo(){
     let statement = '';
     userArray.forEach((user, i) => {
         statement += `
-        <li>${user.names}
+        <li>
+        <input 
+                type="checkbox" 
+                ${user.completed ? "checked" : ""}
+                onclick="toggleTaskStatus(${i})"
+            />
+        ${user.names}
         <button onclick="EditInfo(${i})" class = "edit">Edit</button>
         <button onclick="DeleteInfo(${i})" class = "delete">Delete</button>
-        </li>`
+        </li>
+        `
     })
     ul.innerHTML = statement
+    updateCounters();
 }
 
 function EditInfo(id){
@@ -59,4 +70,19 @@ function EditInfo(id){
 function DeleteInfo(id){
     userArray.splice(id, 1)
     saveInfo(userArray);
+}
+
+function updateCounters() {
+    const completedTasks = userArray.filter((task) => task.completed).length;
+    const UncompletedTasks = userArray.length - completedTasks;
+
+    completedCounter.innerText = completedTasks;
+    uncompletedCounter.innerText = UncompletedTasks;
+}
+
+function toggleTaskStatus(index) {
+    const task = userArray[index];
+    task.completed = !task.completed; // Switch the status
+    saveInfo(userArray); // Save data and update UI
+    updateCounters();      // Update counters based on updated status
 }
