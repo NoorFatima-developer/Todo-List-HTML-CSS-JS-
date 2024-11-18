@@ -22,7 +22,7 @@ addButton.onclick = () => {
         if(name == ""){
         alert("Please Enter a Name");
         return;
-    }else
+        }else
          userArray.push({"names": name})
     }
 
