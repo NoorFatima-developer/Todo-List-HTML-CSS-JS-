@@ -14,15 +14,21 @@ DisplayInfo()
 
 addButton.onclick = () => {
     const name = inputField.value.trim();
-    if(name == ""){
+
+    if(edit_id!=null){
+        //edit
+        userArray.splice(edit_id, 1,{"names": name});
+    }else{
+        //insert
+        if(name == ""){
         alert("Please Enter a Name");
         return;
     }
     userArray.push({"names": name})
-    
-        saveInfo(userArray)
-        inputField.value = "";
-        DisplayInfo()
+    }
+
+    DisplayInfo()
+    addButton.innerText = "Add"
 }   
 
 function saveInfo(arr){
@@ -39,7 +45,6 @@ function DisplayInfo(){
         <button onclick="DeleteInfo(${i})" class = "delete">Delete</button>
         </li>`
     })
-
     ul.innerHTML = statement
 }
 
