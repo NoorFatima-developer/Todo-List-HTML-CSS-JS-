@@ -1,12 +1,10 @@
 # Todo-List-HTML-CSS-JS-" 
 
-Project Demo
-Click here to View the Todo List: https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/
+Project Demo:
 
+Click below to View the Todo List:
 
-
+https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/
 
 [Click here to watch the demo video](https://noorfatima-developer.github.io/Todo-List-HTML-CSS-JS-/assets/Todo-List.mp4)
-
-https://private-user-images.githubusercontent.com/129104494/387334978-b36161cd-f3c5-4456-ad2e-d16477ba902f.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE5NTUxNDksIm5iZiI6MTczMTk1NDg0OSwicGF0aCI6Ii8xMjkxMDQ0OTQvMzg3MzM0OTc4LWIzNjE2MWNkLWYzYzUtNDQ1Ni1hZDJlLWQxNjQ3N2JhOTAyZi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTExOFQxODM0MDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MjYwZTQ3YTVmMDQwNWUwMGQyYzZiMzE2MzU4ODdkZjI2ODNlY2Y4YTdlZDAxMmYwODg4MjM1ZmRmNjc0NzdmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.f94wWFDEeAd_ysnonLqJru7XWqD7rEkM7I1JrlgjjW0
 
